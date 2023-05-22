@@ -4,4 +4,6 @@
 
 class StudentAPI
 {
+    // TO-DO: skapa denna klassen
+    // outputa students som JSON
 }
