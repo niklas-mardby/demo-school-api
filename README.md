@@ -19,3 +19,8 @@ En student root/?student-id=1
 
 Alla klasser root/?action=class
 En klass root/class-id=1
+
+## TO-DO
+
+- Skala upp till CRUD för båda tabellerna Students och Class
+-

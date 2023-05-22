@@ -1,9 +1,15 @@
 <?php
 
-// View för student-modellen, denna outputar JSON
-
 class StudentAPI
 {
-    // TO-DO: skapa denna klassen
-    // outputa students som JSON
+
+    public function outputStudents(array $students): void
+    {
+        $json = [
+            'student-count' => count($students),
+            'result' => $students
+        ];
+        header("Content-Type: application/json");
+        echo json_encode($json);
+    }
 }

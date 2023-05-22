@@ -2,8 +2,16 @@
 
 // Controller som tittar på query string samt agerar på användarens valda action/qs
 
-// titta på qs för att läsa (Read) studenter
-// Alla studenter root/?action=students
-// En student root/?student-id=1
+require_once 'view/student-api.php';
+require_once 'model/student-model.php';
 
-// TODO: GET[action]=="students", tvätta, och agera
+$studentModel = new StudentModel();
+$studentAPI = new StudentAPI();
+
+if (isset($_GET['action'])) {
+    $chosenAction = filter_var($_GET['action'], FILTER_SANITIZE_SPECIAL_CHARS);
+
+    if ($chosenAction == 'students') {
+        $studentAPI->outputStudents($studentModel->getStudents());
+    }
+}

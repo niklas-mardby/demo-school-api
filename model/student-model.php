@@ -25,7 +25,7 @@ class StudentModel
 
     function getStudents()
     {
-        $statement = $this->pdo->prepare('SELECT * FROM students');
+        $statement = $this->pdo->prepare('SELECT students.*,class.name AS class_name FROM students JOIN class ON students.class_id=class.id;');
         $statement->execute();
 
         return $statement->fetchAll();
