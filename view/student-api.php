@@ -1,5 +1,7 @@
 <?php
 
+// förbättringsområden: kanske skapa en class SchoolAPI som denna klassen ärver (extends)
+
 class StudentAPI
 {
 

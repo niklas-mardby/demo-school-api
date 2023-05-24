@@ -1,10 +1,11 @@
 <?php
 
+// förbättringsområden: skapa en class SchoolModel som denna klassen ärver (extends)
+
 // Model för tabellen Students
 
 class StudentModel
 {
-    // TO-DO: metod för att läsa hela student-tabellen
     private $pdo;
 
     public function __construct()

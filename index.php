@@ -2,6 +2,11 @@
 
 // Controller som tittar på query string samt agerar på användarens valda action/qs
 
+// localhost/mappar/  -> htdosc/mappar/index.php
+// GET-parametrar som en enkel routing
+// nackdel med en index.php är att den kan bli lång
+// bryter vi ut till controller/
+
 require_once 'view/student-api.php';
 require_once 'model/student-model.php';
 
